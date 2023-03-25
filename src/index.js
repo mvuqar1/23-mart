@@ -20,10 +20,6 @@ const router = createBrowserRouter([
     element: <App />,
     children:[
       {
-        path: "/",
-        element: <App />,
-      },
-      {
         path: "/counterIndex",
         element: <CounterIndex />,
       },
@@ -34,10 +30,6 @@ const router = createBrowserRouter([
       {
         path: "/second",
         element: <Second />,
-      },
-      {
-        path: "/",
-        element: <App />,
       },
 
     ]
