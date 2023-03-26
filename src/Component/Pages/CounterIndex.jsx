@@ -12,8 +12,6 @@ function Dicriz(){
 SetValu(valu - 1)
 }
 const isDisabled = valu>10||valu<-10
-console.log(isDisabled)
-
 
 // if(valu>10||valu<-10){
 //     console.log('nice')
