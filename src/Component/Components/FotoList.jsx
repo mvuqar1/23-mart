@@ -1,12 +1,12 @@
 import React from 'react'
 
 export default function FotoItem(props) {
-  const {fotId}=props
+  const {fotoId}=props
   return (
     <div>
-      <div>{fotId.title}</div>
-      <img style={{width:"500px"}} src={fotId.image} alt={fotId.title}/>
-      <span>{fotId.price}</span>
+      <div>{fotoId.title}</div>
+      <img style={{width:"500px"}} src={fotoId.image} alt={fotoId.title}/>
+      <span>{fotoId.price}</span>
     </div>
   )
 }

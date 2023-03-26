@@ -24,6 +24,8 @@ export default function App() {
         </ul>
       </nav>
       <div style={{minHeight:"640px"}}>
+
+        
       <Outlet />
 
 

@@ -14,3 +14,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.btn{
+  background-color: rgb(36, 123, 204);
+  color: aliceblue;
+  font-size: 20px;
+  opacity: .6;
+  text-decoration: none;
+
+  padding: 5px;
+  border-radius: 8px;
+
+}
+.btn:hover{
+  opacity: 1;
+}

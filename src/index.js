@@ -11,7 +11,7 @@ import "./index.css"
 import App from "./App"
 import Second from './Component/Pages/Second';
 import First from './Component/Pages/Products';
-import CounterIndex from './Component/Pages/CounterIndex';
+import CounterIndex from './Component/Pages/Counter';
 import Home from './Component/Pages/Home';
 import Error from './Component/Pages/Error';
 import Foto from './Component/Pages/Foto';
