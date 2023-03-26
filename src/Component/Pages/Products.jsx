@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { getAllApi } from "../../Api"
+import { getAllApi } from "../API/Api"
 import Preloader from "../Components/Preloader"
 import AllApiList from '../Components/AllApiList'
 
@@ -17,9 +17,12 @@ export default function First() {
 
   return (
 
-    <div>First<br />
+    <div>
+      <h1>First</h1>
+      <br />
       {!cataloq.length ? (
         <Preloader />
+        
         ):(
           <AllApiList cataloq={cataloq}/>
         )

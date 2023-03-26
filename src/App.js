@@ -16,14 +16,19 @@ export default function App() {
             <Link to="/counterIndex">Counter</Link>
           </li>
           <li>
-            <Link to="/first">First</Link>
+            <Link to="/products">Products</Link>
           </li>
           <li>
             <Link to="/second">Second</Link>
           </li>
         </ul>
       </nav>
+      <div style={{minHeight:"640px"}}>
       <Outlet />
+
+
+      </div>
+      <h1 style={{backgroundColor:"blue"}}>Footer</h1>
 
     </>
   )

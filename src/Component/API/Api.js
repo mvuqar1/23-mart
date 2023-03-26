@@ -5,7 +5,7 @@ const getAllApi=async ()=>{
     return await response.json();
 }
 const getIdApi=async (apiId)=>{
-    const response=await fetch(API_URL+apiId);
+    const response=await fetch(`${API_URL}/${apiId}`);
     return await response.json();
 }
 export{getAllApi,getIdApi};

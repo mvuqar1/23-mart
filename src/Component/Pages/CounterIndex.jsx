@@ -22,7 +22,7 @@ const isDisabled = valu>10||valu<-10
   return (
 
     <div>
-        <div>Counter</div>
+        <h1>Counter</h1>
         <div>{valu}</div>
         <button disabled={isDisabled} onClick={Dicriz}>Dicriment</button>
         <button disabled={isDisabled} onClick={Incriz}>Incriment</button>

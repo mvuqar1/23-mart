@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Second() {
   return (
-    <div>Second</div>
+    <h1>Second</h1>
   )
 }
