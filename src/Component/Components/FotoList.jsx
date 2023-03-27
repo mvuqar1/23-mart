@@ -9,6 +9,7 @@ export default function FotoItem(props) {
 
   const navigate = useNavigate()
   const goBack = () => navigate(-1)
+
   return (
     <div>
       <button className='btn-1' onClick={goBack}>Go Back</button>
