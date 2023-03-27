@@ -7,8 +7,8 @@ export default function App() {
 
   return (
     <div className='wrapper'>
-      <nav >
-        <ul>
+      <nav className='header' >
+        <ul className='header-items'> 
           <li>
             <Link to="/">Home</Link>
           </li>
