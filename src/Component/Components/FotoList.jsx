@@ -29,7 +29,7 @@ export default function FotoItem(props) {
     };
   }, []);
   return (
-    <div onKeyUp={keyButton}>
+    <div>
       <button className='btn-1' onClick={goBack}>Go Back</button>
       <div>{fotoId.title}</div>
       <img style={{ width: "300px" }} src={fotoId.image} alt={fotoId.title} />
