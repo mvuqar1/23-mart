@@ -10,12 +10,9 @@ export default function FotoItem(props) {
 
   const navigate = useNavigate()
   const goBack = () => navigate(-1)
-  const keyButton=(e)=>{
-    console.log(e.target);
-  }
+
   useEffect(() => {
     const keyDownHandler = event => {
-      // console.log('User pressed: ', event.key);
 
       if (event.key === 'Backspace') {
         event.preventDefault();
@@ -23,9 +20,10 @@ export default function FotoItem(props) {
       }
     };
     document.addEventListener('keydown', keyDownHandler);
-
+    console.log("girish;");
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
+      console.log("cixish");
     };
   }, []);
   return (
