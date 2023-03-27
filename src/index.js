@@ -9,12 +9,13 @@ import {
 import "./index.css"
 
 import App from "./App"
-import Second from './Component/Pages/Second';
-import First from './Component/Pages/Products';
-import CounterIndex from './Component/Pages/Counter';
 import Home from './Component/Pages/Home';
-import Error from './Component/Pages/Error';
+import Counter from './Component/Pages/Counter';
+import Products from './Component/Pages/Products';
+import Second from './Component/Pages/Second';
+
 import Foto from './Component/Pages/Foto';
+import Error from './Component/Pages/Error';
 
 
 const router = createBrowserRouter([
@@ -28,16 +29,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/counterIndex",
-        element: <CounterIndex />,
+        element: <Counter />,
       },
       {
         path: "/products",
-        element: <First />,
+        element: <Products/>,
       },
       {
         path: "/second",
         element: <Second />,
       },
+
       {
         path: "/products/:id",
         element: <Foto />,

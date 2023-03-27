@@ -6,8 +6,8 @@ import { Link, Outlet } from 'react-router-dom'
 export default function App() {
 
   return (
-    <>
-      <nav>
+    <div className='wrapper'>
+      <nav >
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -23,15 +23,13 @@ export default function App() {
           </li>
         </ul>
       </nav>
-      <div style={{minHeight:"640px"}}>
-
-        
-      <Outlet />
-
+      <div className='main'>
+        <Outlet />
+      </div>
+      <div className='footer'>
+      <h1 style={{ backgroundColor: "blue" }}>Footer</h1>
 
       </div>
-      <h1 style={{backgroundColor:"blue"}}>Footer</h1>
-
-    </>
+    </div>
   )
 }
