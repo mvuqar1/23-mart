@@ -3,27 +3,23 @@ import {useEffect} from 'react';
 
 import { useNavigate } from 'react-router-dom'
 
-
 export default function FotoItem(props) {
 
   const { fotoId } = props
-
   const navigate = useNavigate()
   const goBack = () => navigate(-1)
 
   useEffect(() => {
     const keyDownHandler = event => {
-
       if (event.key === 'Backspace') {
-        event.preventDefault();
+        // event.preventDefault();
         goBack();
       }
     };
+    
     document.addEventListener('keydown', keyDownHandler);
-    console.log("girish;");
     return () => {
-      document.removeEventListener('keydown', keyDownHandler);
-      console.log("cixish");
+      document.removeEventListener('keydown', keyDownHandler)
     };
   }, []);
   return (
