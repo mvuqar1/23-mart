@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { Link, Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 
 export default function App() {
 
@@ -10,16 +10,16 @@ export default function App() {
       <nav className='header' >
         <ul className='header-items'> 
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="/counterIndex">Counter</Link>
+            <NavLink to="/counterIndex">Counter</NavLink>
           </li>
           <li>
-            <Link to="/products">Products</Link>
+            <NavLink to="/products">Products</NavLink>
           </li>
           <li>
-            <Link to="/second">Second</Link>
+            <NavLink to="/second">Second</NavLink>
           </li>
         </ul>
       </nav>

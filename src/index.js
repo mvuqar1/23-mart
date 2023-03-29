@@ -18,6 +18,9 @@ import Foto from './Component/Pages/Foto';
 import Error from './Component/Pages/Error';
 
 
+import MerkeziData from './Component/Components/MerkeziData';
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/products",
-        element: <Products/>,
+        element: <Products />,
       },
       {
         path: "/second",
@@ -55,13 +58,15 @@ const router = createBrowserRouter([
 ]);
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
+    <MerkeziData>
+      <RouterProvider router={router} />
+    </MerkeziData>
 
-    <RouterProvider router={router} />
-    
   </React.StrictMode>
 );
 

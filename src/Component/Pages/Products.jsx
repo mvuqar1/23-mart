@@ -12,23 +12,26 @@ export default function First() {
 
   const [cataloq, setCataloq] = useState([]);
   const [filteredCataloq, setFilteredCataloq] = useState([]);
-
+  const [strValue, setStrValue] = useState("")
   const{pathname,search}=useLocation()       //  /products ?search=....
   const navigate = useNavigate();
 
-git 
+
   const hadlerSearch = (str) => {
+    console.log('str: ', str)
+    setStrValue(str)
     setFilteredCataloq(
       cataloq.filter((item) => (
         item.title.toLowerCase().includes(str.toLowerCase())
         ))
         )
-        console.log(`${pathname}-nedir?_____________,${search}`);
-        console.log(navigate)
-        navigate({pathname,search:`?search=${str}`})
 
   }
 
+    useEffect(() => {
+      navigate({pathname, search: `?search=${strValue}`})
+
+    }, [strValue] )
 
   useEffect(() => {
     getAllApi().then((data) => {
