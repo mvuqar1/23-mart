@@ -13,7 +13,7 @@ export default function First() {
   const [cataloq, setCataloq] = useState([]);
   const [filteredCataloq, setFilteredCataloq] = useState([]);
   const [strValue, setStrValue] = useState("")
-  const{pathname,search}=useLocation()       //  /products ?search=....
+  const{pathname}=useLocation()       //  /products ?search=....
   const navigate = useNavigate();
 
 

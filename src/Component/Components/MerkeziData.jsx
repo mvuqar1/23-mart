@@ -12,7 +12,6 @@ const MerkeziData =(props)=> {
     const toggleLogged = () => {
         setLogged(!logged)
     }
-console.log(logged);
 
     return (
         <UserContext.Provider value={{
