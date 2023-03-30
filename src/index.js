@@ -22,8 +22,8 @@ import Foto from './Component/Pages/Foto';
 import Error from './Component/Pages/Error';
 
 
-import MerkeziData from './Component/Components/MerkeziData';
-import DorduncununDatasi from './Component/Components/DorduncununDatasi';
+import MerkeziData from './Component/Data/MerkeziData';
+import DorduncununDatasi from './Component/Data/DorduncununDatasi';
 
 
 const router = createBrowserRouter([

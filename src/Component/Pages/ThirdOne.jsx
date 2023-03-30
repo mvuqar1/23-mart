@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import { DorduncununDatasi } from '../Components/DorduncununDatasi'
+import { DorduncununDatasi } from '../Data/DorduncununDatasi'
 
 export default function ThirdOne() {
   const userContextDeiwenIki = useContext(DorduncununDatasi)
   // console.log(userContextDeiwenIki.car);
   let con=userContextDeiwenIki.car.map((el)=>
-    <p>{el.name}</p>
+    <p key={el.id}>{el.name}</p>
   )
 
   return (

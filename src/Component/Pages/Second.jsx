@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { UserContextDeiwen } from '../Components/MerkeziData';
+import { UserContextDeiwen } from '../Data/MerkeziData';
 
 
 export default function Second() {
