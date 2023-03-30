@@ -18,7 +18,6 @@ export default function First() {
 
 
   const hadlerSearch = (str) => {
-    console.log('str: ', str)
     setStrValue(str)
     setFilteredCataloq(
       cataloq.filter((item) => (

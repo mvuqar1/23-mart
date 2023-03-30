@@ -1,10 +1,10 @@
-import{ createContext,useState } from 'react'
+import { createContext, useState } from 'react'
 
-export const UserContext = createContext()
+export const UserContextDeiwen = createContext()
 
 
-const MerkeziData =(props)=> {
-    let {children}=props
+function MerkeziData(props) {
+    let { children } = props
 
     const [logged, setLogged] = useState(false)
 
@@ -14,12 +14,13 @@ const MerkeziData =(props)=> {
     }
 
     return (
-        <UserContext.Provider value={{
-            logged,
-            toggleLogged
-        }}>
+        <UserContextDeiwen.Provider
+            value={{
+                logged,
+                toggleLogged
+            }}>
             {children}
-        </UserContext.Provider>
+        </UserContextDeiwen.Provider>
     )
 }
 

@@ -21,6 +21,9 @@ export default function App() {
           <li>
             <NavLink to="/second">Second</NavLink>
           </li>
+          <li>
+            <NavLink to="/third">Third</NavLink>
+          </li>
         </ul>
       </nav>
       <div className='main'>
