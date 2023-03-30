@@ -1,5 +1,6 @@
 import { createContext, useState } from 'react'
 
+
 export const CarContext = createContext()
 
 
@@ -13,14 +14,17 @@ export default function CarData(props) {
         { id: 4, name: "HYUNDAI" },
         { id: 5, name: "KIA" },
     ])
-    const set = () => {
-        setCar(!car)
+    const removeCar = sileceyiminIdisi => {
+        setCar(car.filter((item) => {
+            return item.id !== sileceyiminIdisi
+        })
+        )
     }
     return (
         <CarContext.Provider
             value={{
                 car,
-                set
+                removeCar
             }}>
             {children}
         </CarContext.Provider>
