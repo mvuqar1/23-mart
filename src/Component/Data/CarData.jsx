@@ -19,7 +19,7 @@ export const ACTION_TYPES={
 
 const counterReducer = (state, action) => {
     switch (action.type) {
-        case ACTION_TYPES.REMOVEyy:
+        case ACTION_TYPES.REMOVE:
             return state.filter((item) => {
                 return item.id !== action.payload
             })
