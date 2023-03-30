@@ -23,7 +23,7 @@ import Error from './Component/Pages/Error';
 
 
 import MerkeziData from './Component/Data/MerkeziData';
-import DorduncununDatasi from './Component/Data/DorduncununDatasi';
+import CarData from './Component/Data/CarData';
 
 
 const router = createBrowserRouter([
@@ -45,29 +45,30 @@ const router = createBrowserRouter([
       },
       {
         path: "/second",
-        element: <MerkeziData>
-          <Second />
-        </MerkeziData>
+        element:
+
+          <MerkeziData>
+            <Second />
+          </MerkeziData>
       },
       {
         path: "/third",
-        element:<DorduncununDatasi>
+        element:
 
-          <Third />
-        </DorduncununDatasi>
+          <CarData>
+            <Third />
+          </CarData>
         ,
         children: [
           {
             path: "/third/one",
             element:
               <ThirdOne />
-
           },
           {
             path: "/third/two",
             element:
               <ThirdTwo />
-
           }
         ]
       },
@@ -92,9 +93,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-   
-      <RouterProvider router={router} />
-   
+
+    <RouterProvider router={router} />
+
 
 
 

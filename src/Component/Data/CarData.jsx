@@ -1,15 +1,15 @@
 import { createContext, useState } from 'react'
 
-export const DorduncununDatasi = createContext()
+export const CarContext = createContext()
 
 
-function DorduncununContexti(props) {
+export default function CarData(props) {
     let { children } = props
     
     const [car, setCar] = useState([
         { id: 1, name: "BMW" },
         { id: 2, name: "AUDI" },
-        { id: 3, name: "MERSEDES" },
+        { id: 3, name: "MERCEDES" },
         { id: 4, name: "HYUNDAI" },
         { id: 5, name: "KIA" },
     ])
@@ -17,14 +17,13 @@ function DorduncununContexti(props) {
         setCar(!car)
     }
     return (
-        <DorduncununDatasi.Provider
+        <CarContext.Provider
             value={{
                 car,
                 set
             }}>
             {children}
-        </DorduncununDatasi.Provider>
+        </CarContext.Provider>
     )
 }
 
-export default DorduncununContexti
