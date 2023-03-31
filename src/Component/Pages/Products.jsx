@@ -30,7 +30,7 @@ export default function First() {
     useEffect(() => {
       navigate({pathname, search: `?search=${strValue}`})
 
-    }, [strValue] )
+    }, [navigate, pathname, strValue] )
 
   useEffect(() => {
     getAllApi().then((data) => {

@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 
-import { CarContext } from '../Data/CarData'
-import { ACTION_TYPES } from '../Data/CarData'
+import { CarContext } from '../../Data/CarData'
+import { ACTION_TYPES } from '../../Data/CarData'
 
 export default function ThirdOne() {
-  const {car,dispatc} = useContext(CarContext)
+  const {carState,dispatc} = useContext(CarContext)
   return (
     <div style={{ fontSize: "20px", color: "blue", marginLeft: "25%" }}>
-      {car.map((el) =>
+      {carState.map((el) =>
         <div key={el.id}>
           <p>
             <button

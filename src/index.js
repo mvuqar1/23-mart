@@ -14,9 +14,9 @@ import Home from './Component/Pages/Home';
 import Counter from './Component/Pages/Counter';
 import Products from './Component/Pages/Products';
 import Second from './Component/Pages/Second';
-import Third from './Component/Pages/Third';
-import ThirdOne from './Component/Pages/ThirdOne';
-import ThirdTwo from './Component/Pages/ThirdTwo';
+import Third from './Component/Pages/Third/Third';
+import ThirdOne from './Component/Pages/Third/ThirdOne';
+import ThirdTwo from './Component/Pages/Third/ThirdTwo';
 
 import Foto from './Component/Pages/Foto';
 import Error from './Component/Pages/Error';
@@ -93,11 +93,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-
     <RouterProvider router={router} />
-
-
-
 
 
   </React.StrictMode>

@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
-import { CarContext } from '../Data/CarData'
+import { CarContext } from '../../Data/CarData'
 
 export default function ThirdTwo() {
-  const { car } = useContext(CarContext)
+  const { carState } = useContext(CarContext)
 
 
   return (
     <div style={{ fontSize: "20px", color: "red", marginLeft: "67%" }}>
-      {car.map((el) =>
+      {carState.map((el) =>
         <p key={el.id}>
           {el.name}
         </p>
