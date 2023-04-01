@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 
 export default function FifthTho() {
-  const count=useSelector(state=>state.counter)
+  const count=useSelector(state=>state.count)
   return (
     <div style={{marginLeft:"50%"}}>
       <h1>{count}</h1>

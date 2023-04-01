@@ -1,17 +1,17 @@
 import { useSelector,useDispatch } from "react-redux";
-import { ACTION_TYPES_STORE } from "../../Store/store";
+import * as action_types_store  from "../../Redux/ACTION/action_types_store";
 
 
 const Fifth = () => {
     const dispatchFunction= useDispatch();
-    const counter = useSelector((state) => state.counter)
+    const count = useSelector((state) => state.count)
     
     const incrimentHandler=()=>{
-        dispatchFunction({type:ACTION_TYPES_STORE.PLUS})
+        dispatchFunction({type:action_types_store.PLUS})
         
     }
     const dicrimentHandler=()=>{
-        dispatchFunction({type:ACTION_TYPES_STORE.MINUS})
+        dispatchFunction({type:action_types_store.MINUS})
         
 
     }
@@ -21,7 +21,7 @@ const Fifth = () => {
     return (
         <main style={{marginLeft:"18%"}} >
             <h1>Счётчик</h1>
-            <h1 >{counter}</h1>
+            <h1 >{count}</h1>
             <button onClick={incrimentHandler}>+</button>
             <button onClick={dicrimentHandler}>-</button>
             <br/>

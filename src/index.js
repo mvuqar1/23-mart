@@ -29,7 +29,7 @@ import Error from './Component/Pages/Error';
 import MerkeziData from './Component/Data/MerkeziData';
 import CarData from './Component/Data/CarData';
 import { Provider } from 'react-redux';
-import store from './Component/Store/store';
+import {store} from './Component/Redux/Store/store';
 
 
 const router = createBrowserRouter([
@@ -85,7 +85,7 @@ const router = createBrowserRouter([
           {
             path: "/fifth/one",
             element:
-              <FifthOne/>
+              <FifthOne />
           },
           {
             path: "/fifth/two",
