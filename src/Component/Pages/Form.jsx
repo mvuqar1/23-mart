@@ -4,17 +4,26 @@ import { useSelector } from 'react-redux'
 
 
 export default function Form() {
-  const {name,surname,age,mesag}=useSelector(state=>state?.countReducer?.form)
-
+  const siyahi=useSelector(state=>state?.countReducer?.form)
+console.log(siyahi);
 
 
   return (
     <>
     <FormComponent/>
-    <p>{name}</p>
-    <p>{surname}</p>
-    <p>{age}</p>
-    <p>{mesag}</p>
+    <div>
+    {siyahi.map((el)=>
+    <div>
+      {el.name}<br/>
+      {el.surname}<br/>
+      {el.age}<br/>
+      {el.mesag}<br/>
+    </div>
+  
+    )}
+
+    </div>
+
     </>
     
   )

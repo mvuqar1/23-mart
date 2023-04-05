@@ -14,7 +14,7 @@
 
 
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function FormComponent() {
@@ -29,6 +29,8 @@ export default function FormComponent() {
     }
 
     const [formState, setFormState] = useState(initialState)
+    const [submitted, setSubmitted] = useState(false)
+
 
     const setFunction = (e) => {
         setFormState({
@@ -38,19 +40,22 @@ export default function FormComponent() {
     }
     const sentForm = (e) => {
         e.preventDefault()
+
         dispatch({
             type: "change",
             payload: formState
         })
-        console.log(selector)
-        setFormState({
-            name: '',
-            surname: '',
-            age: '',
-            mesag: '',
-        })
+        setSubmitted(true)
+        console.log('selector: ', selector)
     }
-
+    
+    useEffect(() => {
+        if (submitted) {
+            // console.log(formState)
+            setFormState(initialState)
+            setSubmitted(false)
+        }
+    }, [submitted])
     return (
         <div>
             <form onSubmit={sentForm} >

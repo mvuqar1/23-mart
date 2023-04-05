@@ -2,7 +2,7 @@ import * as action_types from "../../ACTION/action_types";
 
 const initialState = {
     count: 0,
-    form:""
+    form: []
 }
 
 export const countReducer = (state = initialState, action) => {
@@ -31,7 +31,7 @@ export const countReducer = (state = initialState, action) => {
         case "change":
             return {
                 ...state,
-                form: payload
+                form: [...state.form, payload]
             }
         // case action_types.CHANGETOTHISOBJECT:
         //     return {
