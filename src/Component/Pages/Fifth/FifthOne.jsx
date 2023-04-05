@@ -3,9 +3,10 @@ import * as action_creater from "../../Redux/ACTION/action_creater";
 
 
 const Fifth = () => {
-    const count = useSelector((state) => state.count)
+    const count = useSelector((state) => state.countReducer.count)
+    const yuz = useSelector((state) => state.countReducer.yuz)
 
-    const dispatchFunction = useDispatch();
+    const dispatchFunction = useDispatch()
 
 
     return (
@@ -14,7 +15,9 @@ const Fifth = () => {
             <h1 >{count}</h1>
             <button onClick={() => dispatchFunction(action_creater.incrimentHandler())}>+</button>
             <button onClick={() => dispatchFunction(action_creater.dicrimentHandler())}>-</button>
-            <button onClick={() => dispatchFunction(action_creater.resetHandler())}>Reset</button>
+            <br/>
+            <button onClick={() => dispatchFunction(action_creater.changeToThisNumber(100))}>{yuz}</button>
+            <button onClick={() => dispatchFunction(action_creater.resetHandler(0))}>Reset</button>
             <br />
             <button >Спрятать / Показать</button>
         </main>

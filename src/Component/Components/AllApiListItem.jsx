@@ -7,7 +7,8 @@ export default function AllApiListItem(props) {
     return (
         <div style={{display:"",alignItems:"center",width:"30%",minHeight:"250px",maxHeight:"450px",overflow:"hiden"}}>
             <div>{title}</div>
-            <img style={{width:"100px"}} src={image} alt={title}/>
+            
+            <Link  to={`/products/${id}`}><img style={{width:"100px"}} src={image} alt={title}/></Link>
             <Link className='btn-2' to={`/products/${id}`}>Open Product</Link>
             <p>{description.slice(0,250)}...</p>
             <span>{price}</span>

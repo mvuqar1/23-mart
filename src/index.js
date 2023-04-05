@@ -11,6 +11,7 @@ import "./index.css"
 import App from "./App"
 
 import Home from './Component/Pages/Home';
+import Form from './Component/Pages/Form';
 import Counter from './Component/Pages/Counter';
 import Products from './Component/Pages/Products';
 import Second from './Component/Pages/Second';
@@ -31,7 +32,7 @@ import Error from './Component/Pages/Error';
 import MerkeziData from './Component/Data/MerkeziData';
 import CarData from './Component/Data/CarData';
 import { Provider } from 'react-redux';
-import {store} from './Component/Redux/Store/store';
+import { store } from './Component/Redux/Store/store';
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path:"/form",
+        element:<Form/>
       },
       {
         path: "/counterIndex",
@@ -62,14 +67,11 @@ const router = createBrowserRouter([
       {
         path: "/third",
         element:
-
-          <CarData>
-            <Third />
-          </CarData>
+          <Third />
         ,
         children: [
           {
-            path: "/third/one",
+            path: "/third",
             element:
               <ThirdOne />
           },
@@ -85,7 +87,7 @@ const router = createBrowserRouter([
         element: <Fifth />,
         children: [
           {
-            path: "/fifth/one",
+            path: "/fifth",
             element:
               <FifthOne />
           },
@@ -123,7 +125,9 @@ root.render(
   <React.StrictMode>
 
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <CarData>
+        <RouterProvider router={router} />
+      </CarData>
     </Provider>
 
   </React.StrictMode>

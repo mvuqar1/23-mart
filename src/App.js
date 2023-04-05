@@ -13,6 +13,9 @@ export default function App() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
+            <NavLink to="/form">Form</NavLink>
+          </li>
+          <li>
             <NavLink to="/counterIndex">Counter</NavLink>
           </li>
           <li>

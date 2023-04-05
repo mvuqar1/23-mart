@@ -4,7 +4,7 @@ import { CarContext } from '../../Data/CarData'
 import { ACTION_TYPES } from '../../Data/CarData'
 
 export default function ThirdOne() {
-  const {carState,dispatc} = useContext(CarContext)
+  const { carState, dispatc } = useContext(CarContext)
   return (
     <div style={{ fontSize: "20px", color: "blue", marginLeft: "25%" }}>
       {carState.map((el) =>
@@ -12,16 +12,11 @@ export default function ThirdOne() {
           <p>
             <button
               className='btn-2'
-              onClick={()=>{
-                dispatc({
-                  type:ACTION_TYPES.REMOVE,
-                  payload:(el.id)
-                })
-              }}
-              style={{ marginRight: "3%" }}>
+              style={{ marginRight: "3%" }}
+              onClick={() => { dispatc({ type: ACTION_TYPES.REMOVE, payload: (el.id) }) }}>
               Delete
             </button>
-              {el.name}
+            {el.name}
           </p>
         </div>
       )}

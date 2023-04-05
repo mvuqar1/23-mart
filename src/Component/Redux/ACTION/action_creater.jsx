@@ -13,13 +13,26 @@ export const dicrimentHandler=()=>{
         type:action_types_store.MINUS
     }
 }
-export const resetHandler=()=>{
+export const resetHandler=(id)=>{
     return{
         type:action_types_store.RESET,
-        payload:0
+        payload:id
+    }
+}
+export const changeToThisNumber=(id)=>{
+    return{
+        type:action_types_store.CHANGETOTHISNUMBER,
+        payload:id
     }
 }
 
 export const toggleCounterHandler = () => {
         console.log("hjkl")
  }
+
+// export const changeToThisObject=(formState)=>{
+//     return{
+//         type:action_types_store.CHANGETOTHISOBJECT,
+//         payload:formState
+//     }
+// }

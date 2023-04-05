@@ -7,7 +7,8 @@ export default function FotoItem(props) {
 
   const { fotoId } = props
   const navigate = useNavigate()
-  const goBack = () => navigate(-1)
+ 
+  const goBack = () => navigate("/products")      // const goBack = () => navigate("-1")
 
   useEffect(() => {
     const keyDownHandler = event => {
@@ -21,7 +22,7 @@ export default function FotoItem(props) {
     return () => {
       document.removeEventListener('keydown', keyDownHandler)
     };
-  }, []);
+  }, [goBack]);
   return (
     <div>
       <button className='btn-1' onClick={goBack}>Go Back</button>

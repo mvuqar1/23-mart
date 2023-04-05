@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useState, useEffect } from 'react'
-import { useLocation, useNavigate} from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import { getAllApi } from "../API/Api"
 import Preloader from "../Components/Preloader"
@@ -13,7 +13,7 @@ export default function First() {
   const [cataloq, setCataloq] = useState([]);
   const [filteredCataloq, setFilteredCataloq] = useState([]);
   const [strValue, setStrValue] = useState("")
-  const{pathname}=useLocation()       //  /products ?search=....
+  const { pathname } = useLocation()      //  /products ?search=....
   const navigate = useNavigate();
 
 
@@ -22,15 +22,13 @@ export default function First() {
     setFilteredCataloq(
       cataloq.filter((item) => (
         item.title.toLowerCase().includes(str.toLowerCase())
-        ))
-        )
-
+      ))
+    )
   }
 
-    useEffect(() => {
-      navigate({pathname, search: `?search=${strValue}`})
-
-    }, [navigate, pathname, strValue] )
+  useEffect(() => {
+    navigate({ pathname, search: `?search=${strValue}` })
+  }, [navigate, pathname, strValue])
 
   useEffect(() => {
     getAllApi().then((data) => {
