@@ -13,12 +13,12 @@
 //     import * as action_creater from "../Redux/ACTION/action_creater";
 
 
-
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { addFormInputs } from '../API/Api'
 
 export default function FormComponent() {
-    const selector = useSelector(state => state)
+    const selector = useSelector(state => state?.countReducer?.form)
     const dispatch = useDispatch()
 
     const initialState = {
@@ -29,8 +29,6 @@ export default function FormComponent() {
     }
 
     const [formState, setFormState] = useState(initialState)
-    const [submitted, setSubmitted] = useState(false)
-
 
     const setFunction = (e) => {
         setFormState({
@@ -39,40 +37,38 @@ export default function FormComponent() {
         })
     }
     const sentForm = (e) => {
+        addFormInputs(formState) 
         e.preventDefault()
-
         dispatch({
             type: "change",
             payload: formState
         })
-        setSubmitted(true)
-        console.log('selector: ', selector)
+        console.log(selector)
+        setFormState({
+            name: '',
+            surname: '',
+            age: '',
+            mesag: '',
+        })
     }
-    
-    useEffect(() => {
-        if (submitted) {
-            // console.log(formState)
-            setFormState(initialState)
-            setSubmitted(false)
-        }
-    }, [submitted])
+
     return (
         <div>
             <form onSubmit={sentForm} >
                 <div>
-                    <input id='name' type="text" name='name' value={formState.name} onChange={setFunction} />
+                    <input id='name' type="text" name='name' value={formState?.name} onChange={setFunction} />
                     <label htmlFor="name"> : AD</label>
                 </div>
                 <div>
-                    <input id="surname" type="text" name='surname' value={formState.surname} onChange={setFunction} />
+                    <input id="surname" type="text" name='surname' value={formState?.surname} onChange={setFunction} />
                     <label htmlFor="surname"> : Soyad</label>
                 </div>
                 <div>
-                    <input id='age' type="number" name='age' value={formState.age} onChange={setFunction} />
+                    <input id='age' type="number" name='age' value={formState?.age} onChange={setFunction} />
                     <label htmlFor="age"> : Age</label>
                 </div>
                 <div>
-                    <textarea id='mesag' type="textarea" name='mesag' value={formState.mesag} onChange={setFunction} />
+                    <textarea id='mesag' type="textarea" name='mesag' value={formState?.mesag} onChange={setFunction} />
                     <label htmlFor="mesag"> : Mesaj</label>
                 </div>
                 <button type='submit' >Submit</button>

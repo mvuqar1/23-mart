@@ -11,7 +11,7 @@ import "./index.css"
 import App from "./App"
 
 import Home from './Component/Pages/Home';
-import Form from './Component/Pages/Form';
+import Form from './Component/Pages/Form/Form';
 import Counter from './Component/Pages/Counter';
 import Products from './Component/Pages/Products';
 import Second from './Component/Pages/Second';
@@ -33,6 +33,10 @@ import MerkeziData from './Component/Data/MerkeziData';
 import CarData from './Component/Data/CarData';
 import { Provider } from 'react-redux';
 import { store } from './Component/Redux/Store/store';
+import Get from './Component/Pages/Form/Get';
+import Post from './Component/Pages/Form/Post';
+import Put from './Component/Pages/Form/Put';
+import Delete from './Component/Pages/Form/Delete';
 
 
 const router = createBrowserRouter([
@@ -45,8 +49,14 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path:"/form",
-        element:<Form/>
+        path: "/form",
+        element: <Form />,
+        children: [
+          {path: "/form",element: <Post/>},
+          {path: "/form/get", element: <Get/>},
+          {path: "/form/put",element: <Put />},
+          {path: "/form/delete",element: <Delete />},
+        ]
       },
       {
         path: "/counterIndex",
@@ -67,40 +77,19 @@ const router = createBrowserRouter([
       {
         path: "/third",
         element:
-          <Third />
-        ,
+          <Third />,
         children: [
-          {
-            path: "/third",
-            element:
-              <ThirdOne />
-          },
-          {
-            path: "/third/two",
-            element:
-              <ThirdTwo />
-          }
+          {path: "/third",element:<ThirdOne />},
+          {path: "/third/two",element:<ThirdTwo />}
         ]
       },
       {
         path: "/fifth",
         element: <Fifth />,
         children: [
-          {
-            path: "/fifth",
-            element:
-              <FifthOne />
-          },
-          {
-            path: "/fifth/two",
-            element:
-              <FifthTwo />
-          },
-          {
-            path: "/fifth/three",
-            element:
-              <FifthThree />
-          }
+          { path: "/fifth", element: <FifthOne /> },
+          { path: "/fifth/two", element: <FifthTwo /> },
+          { path: "/fifth/three", element: <FifthThree /> }
         ]
       },
 
